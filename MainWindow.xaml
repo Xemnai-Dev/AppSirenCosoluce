@@ -7,13 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox Name="SirenInput" HorizontalAlignment="Left" Margin="41,117,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="SiretInput" HorizontalAlignment="Left" Margin="41,257,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SiretInput" HorizontalAlignment="Left" Margin="41,117,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SirenInput" HorizontalAlignment="Left" Margin="41,257,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Siren" HorizontalAlignment="Left" Margin="63,231,0,0" VerticalAlignment="Top"/>
         <Label Content="Siret" HorizontalAlignment="Left" Margin="63,86,0,0" VerticalAlignment="Top"/>
         <Button Name="SiretButton" Content="Verifier" HorizontalAlignment="Left" Margin="271,117,0,0" VerticalAlignment="Top" Width="59" Click="VerifySiret"/>
         <Button Name="SirenButton" Content="Verifier" HorizontalAlignment="Left" Margin="271,257,0,0" VerticalAlignment="Top" Width="59" Click="VerifySiren"/>
-
-
     </Grid>
 </Window>

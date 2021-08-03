@@ -27,15 +27,22 @@ namespace AppSiren
         }
         private bool TestSiren(string number)
         {
-            //string stringNumber = number.ToString();
             if (number.Length == 9)
             {
-                int sum = 0;
                 int pos = 9;
+                int sum = 0;
                 for (int i = 0; i < 9; i++)
                 {
                     int value = (int)Char.GetNumericValue(number[i]);
-                    sum += pos % 2 == 0 ? value * 2 : value;
+
+                    if (pos % 2 == 0)
+                        if ((value * 2).ToString().Length > 1)
+                            sum += (int)Char.GetNumericValue((value * 2).ToString()[0]) + (int)Char.GetNumericValue((value * 2).ToString()[1]);
+                        else
+                            sum += value * 2;
+                    else
+                        sum += value;
+
                     pos--;
                 }
 

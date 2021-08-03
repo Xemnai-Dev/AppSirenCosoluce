@@ -27,7 +27,7 @@ namespace AppSiren
 
         private void VerifySiren(object sender, RoutedEventArgs e)
         {
-            Siren siren = new Siren(SirenInput.Text);
+            Siren siren = new Siren(SirenInput.Text.ToString());
           
             if (siren.IsValid)
                 MessageBox.Show("Siren Valide! ", "Valide ?");
@@ -37,7 +37,7 @@ namespace AppSiren
 
         private void VerifySiret(object sender, RoutedEventArgs e)
         {
-            Siret siret = new Siret(SirenInput.Text);
+            Siret siret = new Siret(SiretInput.Text);
 
             if (siret.IsValid)
                 MessageBox.Show("Siret Valide! ", "Valide ?");
